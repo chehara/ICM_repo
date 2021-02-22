@@ -1,0 +1,55 @@
+service:
+  name: ICM-BackEndService
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  profile: default
+  region: us-east-1
+  stage: ${opt:stage}
+  timeout: 900
+  versionFunctions: false
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - lambda:InvokeFunction
+      Resource:
+        - "arn:aws:lambda:*:*"
+  environment:
+    stage: ${opt:stage}
+    REGION: ${self:provider.region}
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+package:
+  excludeDevDependencies: true
+
+functions:
+  turnOnLight:
+    name: triggerEvent
+    handler: handler.triggerEvent
+    timeout: 600
+    events:
+      - http:
+          path: /api/icm/v1/triggerEvent
+          method: POST
+          cors: true
+  generateNudge:
+    name: generateNudge
+    handler: handler.generateNudge
+    timeout: 600
+    events:
+      - http:
+          path: /api/icm/v1/generateNudge
+          method: POST
+          cors: true
+  updateAction:
+    name: updateAction
+    handler: handler.updateAction
+    timeout: 600
+    events:
+      - http:
+          path: /api/icm/v1/updateAction
+          method: POST
+          cors: true

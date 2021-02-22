@@ -1,0 +1,211 @@
+{
+    "device": "SmartLighting",
+    "privacyPolicyStatements": [
+      {
+        "event": "Create New Account",
+        "actor": {
+          "service": {},
+          "serviceProvide": {
+            "name": "Wyze Labs"
+          },
+          "thridPartyServiceProvider": {},
+          "endUser": {}
+        },
+        "action": {
+          "collect": "Collects",
+          "process": {},
+          "store": {},
+          "share": {}
+        },
+        "object": {
+          "endUserData": [
+            "deviceToken",
+            "name",
+            "email",
+            "password",
+            "profileImage"
+          ],
+          "endUser": {},
+          "serviceProvider": {}
+        },
+        "purpose": {
+          "serviceProvisioning": "Provide and maintain the Devices and Services",
+          "analysis": {},
+          "marketing": {},
+          "advertising": {}
+        },
+        "condition": {
+          "timeConstraints": {}
+        }
+      },
+      {
+        "event": "Make a purchase",
+        "actor": {
+          "service": {},
+          "serviceProvide": {
+            "name": "Wyze Labs"
+          },
+          "thridPartyServiceProvider": {},
+          "endUser": {}
+        },
+        "action": {
+          "collect": "Collects",
+          "process": {},
+          "store": {},
+          "share": {}
+        },
+        "object": {
+          "endUserData": [
+            "deviceToken",
+            "billingAddress",
+            "shippingAddress",
+            "contactNumber",
+            "paymentMethod",
+            "transaction"
+          ],
+          "endUser": {},
+          "serviceProvider": {}
+        },
+        "purpose": {
+          "serviceProvisioning": "Process and fulfill your purchases",
+          "analysis": {},
+          "marketing": {},
+          "advertising": {}
+        },
+        "condition": {
+          "timeConstraints": {}
+        }
+      },
+      {
+        "event": "Logging Device And Usage Information",
+        "actor": {
+          "service": {},
+          "serviceProvide": {
+            "name": "Wyze Labs"
+          },
+          "thridPartyServiceProvider": {},
+          "endUser": {}
+        },
+        "action": {
+          "collect": "Collects",
+          "process": {},
+          "store": {},
+          "share": {}
+        },
+        "object": {
+          "endUserData": [
+            "deviceToken",
+            "event",
+            "date",
+            "tiggerStartTime",
+            "triggerEndTime",
+            "IPAddress",
+            "approximateLocation",
+            "presiteLocation"
+          ],
+          "endUser": {},
+          "serviceProvider": {}
+        },
+        "purpose": {
+          "serviceProvisioning": "Log device and sensor information",
+          "analysis": {},
+          "marketing": {},
+          "advertising": {}
+        },
+        "condition": {
+          "timeConstraints": {}
+        }
+      },
+      {
+        "event": "Logging Device And sensor Information",
+        "actor": {
+          "service": {},
+          "serviceProvide": {
+            "name": "Wyze Labs"
+          },
+          "thridPartyServiceProvider": {},
+          "endUser": {}
+        },
+        "action": {
+          "collect": {},
+          "process": "Processes",
+          "store": {},
+          "share": {}
+        },
+        "object": {
+          "endUserData": [
+            "deviceToken",
+            "event",
+            "date",
+            "tiggerStartTime",
+            "triggerEndTime",
+            "IPAddress",
+            "approximateLocation",
+            "presiteLocation"
+          ],
+          "endUser": {},
+          "serviceProvider": {}
+        },
+        "purpose": {
+          "serviceProvisioning": {},
+          "analysis": [
+            "Monitor trends",
+            "Analyse trends",
+            "usage of devices",
+            "Analyse events"
+          ],
+          "marketing": {},
+          "advertising": {}
+        },
+        "condition": {
+          "timeConstraints": {}
+        }
+      },
+      {
+        "event": "Marketing and advertising devices and services",
+        "actor": {
+          "service": {},
+          "serviceProvide": {
+            "name": "Wyze Labs"
+          },
+          "thridPartyServiceProvider": {},
+          "endUser": {}
+        },
+        "action": {
+          "collect": {},
+          "process": "Processes",
+          "store": {},
+          "share": {}
+        },
+        "object": {
+          "endUserData": [
+            "deviceToken",
+            "trends",
+            "usageDetails"
+          ],
+          "endUser": {},
+          "serviceProvider": {}
+        },
+        "purpose": {
+          "serviceProvisioning": {},
+          "analysis": {},
+          "marketing": [
+            "Develop new Devices and Services",
+            "Provide news",
+            "Offer products",
+            "Offer services",
+            "Offer events",
+            "Provide information of interest",
+            "Promotional communications"
+          ],
+          "advertising": [
+            "Personalize online experience",
+            "Personalize advertisements"
+          ]
+        },
+        "condition": {
+          "timeConstraints": {}
+        }
+      }
+    ]
+  }

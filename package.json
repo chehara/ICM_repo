@@ -1,0 +1,72 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "handler.js",
+  "license": "chehara.pathmabandu@monash.edu",
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "^common/(.*)": "<rootDir>/../common/src/$1",
+      "^lambda/(.*)": "<rootDir>/src/$1"
+    },
+    "transform": {
+      "\\.(ts|tsx)$": "ts-jest"
+    },
+    "testRegex": "/test/.*\\.(ts|tsx|js)$",
+    "testURL": "http://localhost/",
+    "roots": [
+      "<rootDir>/src/test"
+    ]
+  },
+  "dependencies": {
+    "@types/async": "^3.2.3",
+    "@types/lodash": "^4.14.150",
+    "aws-sdk": "^2.673.0",
+    "axios": "^0.19.2",
+    "fs": "^0.0.1-security",
+    "middy": "^0.13.1",
+    "moment": "^2.25.1",
+    "moment-locales-webpack-plugin": "^1.2.0",
+    "mongoose": "^5.9.10",
+    "mongoose-unique-validator": "^2.0.0",
+    "slug": "^0.9.1",
+    "util": "^0.12.3"
+  },
+  "scripts": {
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "build-ts": "tsc",
+    "test": "jest",
+    "start": "./node_modules/.bin/serverless offline -s local --skipCacheInvalidation",
+    "deploy": "./node_modules/.bin/serverless deploy --stage dev",
+    "debug": "node  ./node_modules/.bin/serverless offline -s dev"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@types/aws-iot-device-sdk": "^2.2.2",
+    "@types/aws-lambda": "^0.0.33",
+    "@types/crypto-js": "^3.1.38",
+    "@types/jest": "^25.2.1",
+    "@types/jsonwebtoken": "^7.2.5",
+    "@types/mongodb": "^3.0.7",
+    "@types/mongoose": "^5.7.12",
+    "@types/mongoose-unique-validator": "^1.0.1",
+    "@types/node": "^9.4.7",
+    "babel-jest": "^25.3.0",
+    "jest": "^25.3.0",
+    "newman": "^3.9.3",
+    "serverless": "^1.26.1",
+    "serverless-offline": "^5.12.1",
+    "serverless-webpack": "^5.2.0",
+    "ts-jest": "^25.3.1",
+    "ts-loader": "^2.3.7",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.9.1",
+    "typescript": "^3.8.3",
+    "webpack": "^3.8.0"
+  }
+}
